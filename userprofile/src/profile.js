@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Profile(props) {
-  const { name, role, location } = props;
+  const { name, role, location, email } = props;
 
   const containerStyle = {
     textAlign: 'center',
@@ -28,7 +28,7 @@ function Profile(props) {
     <div style={containerStyle}>
       <h2 style={headingStyle}>User Profile</h2>
       <p style={detailStyle}><strong>Name:</strong> {name}</p>
-     
+      <p style={detailStyle}><strong>Email:</strong> {email}</p>
       <p style={detailStyle}><strong>Role:</strong> {role}</p>
       <p style={detailStyle}><strong>Location:</strong> {location}</p>
     </div>
