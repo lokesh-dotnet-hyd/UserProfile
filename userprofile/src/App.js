@@ -9,22 +9,17 @@ function App() {
   const [location, setLocation] = useState("");
   const [email, setEmail] = useState("");
 
-  const [finalName, setFinalName] = useState("");
-  const [finalLocation, setFinalLocation] = useState("");
-  const [finalEmail, setFinalEmail] = useState("");
-
+  
   const [showProfile, setShowProfile] = useState(false);
 
   const toggleProfile = () => {
-    setFinalName(name);
-    setFinalLocation(location);
-    setFinalEmail(email);
+   
     setShowProfile(!showProfile);
   };
 
   return (
     <div className="App">
-      <Header Name={finalName} />
+      <Header Name={name} />
 
       {!showProfile ? (
         <div className="Profile">
@@ -63,9 +58,9 @@ function App() {
       ) : (
         <div class="userprofile">
           <Profile
-            name={finalName}
-            location={finalLocation}
-            email={finalEmail}
+            name={name}
+            location={location}
+            email={email}
             role="Software Consultant"
           />
           <button onClick={toggleProfile}>Back to Form</button>
